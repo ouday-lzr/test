@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Medecins index{% endblock %}
+
+{% block body %}
+    <h1>Medecins index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>DateNaissance</th>
+                <th>LieuNaissance</th>
+                <th>Gsm</th>
+                <th>Fixe</th>
+                <th>Fax</th>
+                <th>Sexe</th>
+                <th>Adresse</th>
+                <th>EtatActuel</th>
+                <th>AnneeDiplome</th>
+                <th>Epouse</th>
+                <th>SiteWeb</th>
+                <th>CreatedAt</th>
+                <th>UpdatedAt</th>
+                <th>DeletedAt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for medecin in medecins %}
+            <tr>
+                <td>{{ medecin.id }}</td>
+                <td>{{ medecin.email }}</td>
+                <td>{{ medecin.nom }}</td>
+                <td>{{ medecin.prenom }}</td>
+                <td>{{ medecin.dateNaissance ? medecin.dateNaissance|date('Y-m-d') : '' }}</td>
+                <td>{{ medecin.lieuNaissance }}</td>
+                <td>{{ medecin.gsm }}</td>
+                <td>{{ medecin.fixe }}</td>
+                <td>{{ medecin.fax }}</td>
+                <td>{{ medecin.sexe }}</td>
+                <td>{{ medecin.adresse }}</td>
+                <td>{{ medecin.etatActuel }}</td>
+                <td>{{ medecin.anneeDiplome ? medecin.anneeDiplome|date('Y-m-d') : '' }}</td>
+                <td>{{ medecin.epouse }}</td>
+                <td>{{ medecin.siteWeb }}</td>
+                <td>{{ medecin.createdAt ? medecin.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ medecin.updatedAt ? medecin.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ medecin.deletedAt ? medecin.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('medecins_show', {'id': medecin.id}) }}">show</a>
+                    <a href="{{ path('medecins_edit', {'id': medecin.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="19">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('medecins_new') }}">Create new</a>
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Medecins{% endblock %}
+
+{% block body %}
+    <h1>Medecins</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ medecin.id }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ medecin.email }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ medecin.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ medecin.prenom }}</td>
+            </tr>
+            <tr>
+                <th>DateNaissance</th>
+                <td>{{ medecin.dateNaissance ? medecin.dateNaissance|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>LieuNaissance</th>
+                <td>{{ medecin.lieuNaissance }}</td>
+            </tr>
+            <tr>
+                <th>Gsm</th>
+                <td>{{ medecin.gsm }}</td>
+            </tr>
+            <tr>
+                <th>Fixe</th>
+                <td>{{ medecin.fixe }}</td>
+            </tr>
+            <tr>
+                <th>Fax</th>
+                <td>{{ medecin.fax }}</td>
+            </tr>
+            <tr>
+                <th>Sexe</th>
+                <td>{{ medecin.sexe }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ medecin.adresse }}</td>
+            </tr>
+            <tr>
+                <th>EtatActuel</th>
+                <td>{{ medecin.etatActuel }}</td>
+            </tr>
+            <tr>
+                <th>AnneeDiplome</th>
+                <td>{{ medecin.anneeDiplome ? medecin.anneeDiplome|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Epouse</th>
+                <td>{{ medecin.epouse }}</td>
+            </tr>
+            <tr>
+                <th>SiteWeb</th>
+                <td>{{ medecin.siteWeb }}</td>
+            </tr>
+            <tr>
+                <th>CreatedAt</th>
+                <td>{{ medecin.createdAt ? medecin.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt</th>
+                <td>{{ medecin.updatedAt ? medecin.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>DeletedAt</th>
+                <td>{{ medecin.deletedAt ? medecin.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('medecins_index') }}">back to list</a>
+
+    <a href="{{ path('medecins_edit', {'id': medecin.id}) }}">edit</a>
+
+    {{ include('medecins/_delete_form.html.twig') }}
+{% endblock %}

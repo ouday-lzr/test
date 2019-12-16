@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Medecins{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="title col-md-12">
+            <h3>Ajouter Médecin Dentiste</h3>
+        </div>
+    </div>
+
+
+
+    <div class="col-md-6 firstlot">
+    <div class="form-group row">
+        <label for="num_inscerit" class=" col-form-label">Numéro d'inscription<span class="obligatoire">*</span></label>
+        <div class="col-sm-8 ">
+            {{ form_widget(form.id, {'attr': {'class': 'form-control'}}) }}
+        </div>
+    </div>
+
+
+    {{ include('medecins/_form.html.twig') }}
+
+    <a href="{{ path('medecins_index') }}">back to list</a>
+{% endblock %}
