@@ -14,6 +14,7 @@ use App\Entity\TypeModeExercices;
 use App\Entity\Villes;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -27,7 +28,9 @@ class MedecinsType extends AbstractType
             ->add('email')
             ->add('nom')
             ->add('prenom')
-            ->add('dateNaissance')
+            ->add('dateNaissance',DateType::class, [
+                'widget' => 'single_text'
+                ])
             ->add('lieuNaissance')
             ->add('gsm')
             ->add('fixe')

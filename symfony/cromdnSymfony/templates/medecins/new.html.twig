@@ -12,12 +12,183 @@
 
 
     <div class="col-md-6 firstlot">
-    <div class="form-group row">
-        <label for="num_inscerit" class=" col-form-label">Numéro d'inscription<span class="obligatoire">*</span></label>
-        <div class="col-sm-8 ">
-            {{ form_widget(form.id, {'attr': {'class': 'form-control'}}) }}
+        <div class="form-group row">
+            <label for="num_inscerit" class=" col-form-label">Numéro d'inscription<span class="obligatoire">*</span></label>
+            <div class="col-sm-8 ">
+                {{ form_widget(form.id, {'attr': {'class': 'form-control' }}) }}
+            </div>
         </div>
+        <div class="form-group row">
+            <label for="date-inscription" class=" col-form-label">Date inscription<span class="obligatoire">*</span></label>
+            <div class="col-sm-8">
+                {{ form_widget(form.id, {'attr': {'class': 'form-control' }}) }}
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="nom" class=" col-form-label">Nom<span class="obligatoire">*</span></label>
+            <div class="col-sm-8">
+                {{ form_widget(form.nom, {'attr': {'class': 'form-control' }}) }}
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="prenom" class=" col-form-label">Prénom<span class="obligatoire">*</span></label>
+            <div class="col-sm-8">
+                {{ form_widget(form.prenom, {'attr': {'class': 'form-control' }}) }}
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="date_naissance" class=" col-form-label">Date de naissance<span class="obligatoire">*</span></label>
+            <div class="col-sm-8">
+                {{ form_widget(form.dateNaissance, {'attr': {'class': 'form-control','type':'date' }}) }}
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="lieu_naissance" class=" col-form-label">lieu de naissance</label>
+            <div class="col-sm-8">
+                {{ form_widget(form.lieuNaissance, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="email" class=" col-form-label">Email<span class="obligatoire">*</span></label>
+            <div class="col-sm-8">
+                {{ form_widget(form.email, {'attr': {'class': 'form-control' }}) }}
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="gsm" class=" col-form-label">Mobile<span class="obligatoire">*</span></label>
+            <div class="col-sm-8">
+                {{ form_widget(form.gsm, {'attr': {'class': 'form-control' }}) }}
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="fixe" class=" col-form-label">Fixe</label>
+            <div class="col-sm-8">
+                {{ form_widget(form.fixe, {'attr': {'class': 'form-control' }}) }}
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="fax" class=" col-form-label">Fax</label>
+            <div class="col-sm-8">
+                {{ form_widget(form.fax, {'attr': {'class': 'form-control' }}) }}
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="site_web" class=" col-form-label">Site web</label>
+            <div class="col-sm-8">
+                {{ form_widget(form.siteWeb, {'attr': {'class': 'form-control' }}) }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="nationalite" class=" col-form-label">Nationalité</label>
+            <div class="col-sm-8">
+            {{ form_widget(form.idNationalite, {'attr': {'class': 'form-control' }}) }}
+            </div>
+         </div>
+
     </div>
+
+
+    <div class="col-md-6 secondlot">
+
+        <div class="form-group row">
+            <label for="gouvernorat" class=" col-form-label">Gouvernorat<span class="obligatoire">*</span></label>
+            <div class="col-sm-8">
+                {{ form_widget(form.idGouvernorat, {'attr': {'class': 'form-control' }}) }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="adresse" class=" col-form-label">Délégation<span class="obligatoire">*</span></label>
+            <div class="col-sm-8">
+                {{ form_widget(form.idDelegation, {'attr': {'class': 'form-control' }}) }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="ville" class="col-form-label">Localité<span class="obligatoire">*</span></label>
+            <div class="col-sm-8">
+                {{ form_widget(form.idVille, {'attr': {'class': 'form-control' }}) }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="adresse" class=" col-form-label">Adresse<span class="obligatoire">*</span></label>
+            <div class="col-sm-8">
+                {{ form_widget(form.adresse, {'attr': {'class': 'form-control' }}) }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="latitude" class=" col-form-label">Latitude<span class="obligatoire">*</span></label>
+            <div class="col-sm-8">
+                {{ form_widget(form.idNationalite, {'attr': {'class': 'form-control' }}) }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="longitude" class=" col-form-label">Longitude<span class="obligatoire">*</span></label>
+            <div class="col-sm-8">
+                {{ form_widget(form.idNationalite, {'attr': {'class': 'form-control' }}) }}
+            </div>
+        </div>
+
+         <div class="form-group row">
+            <label for="mode" class=" col-form-label">Mode Exercice<span class="obligatoire">*</span></label>
+            <div class="col-sm-8">
+                {{ form_widget(form.idMode, {'attr': {'class': 'form-control' }}) }}
+            </div>
+         </div>
+
+         <div class="form-group row">
+            <label for="type_exercice" class=" col-form-label">Type Mode d'exercice</label>
+            <div class="col-sm-8">
+                {{ form_widget(form.idNationalite, {'attr': {'class': 'form-control' }}) }}
+            </div>
+         </div>
+
+        <div class="form-group row">
+            <label for="specialite" class="col-form-label">Specialité<span class="obligatoire">*</span></label>
+            <div class="col-sm-8">
+                {{ form_widget(form.idSpecialite, {'attr': {'class': 'form-control' }}) }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="diplome" class=" col-form-label">Diplôme<span class="obligatoire">*</span></label>
+            <div class="col-sm-8">
+                {{ form_widget(form.idDiplome, {'attr': {'class': 'form-control' }}) }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="annee-diplome" class=" col-form-label">Année diplôme<span class="obligatoire">*</span></label>
+            <div class="col-sm-8">
+                {{ form_widget(form.anneeDiplome, {'attr': {'class': 'form-control' }}) }}
+            </div>
+        </div>
+
+        <div class="form-group row" id="epouse_balise">
+            <label for="epouse" class=" col-form-label">Conjoint(e)</label>
+            <div class="col-sm-8">
+                {{ form_widget(form.epouse, {'attr': {'class': 'form-control' }}) }}
+            </div>
+        </div>
+
+        <div class="form-group row justify-content-center">
+            <label for="sexe" class=" col-form-label">Genre<span class="obligatoire">*</span></label>
+            <div class="custom-control custom-radio custom-control-inline col-sm-4">
+                <input type="radio" id="homme" name="sexe" value="1" class="custom-control-input" checked required>
+                <label class="custom-control-label" for="homme">Homme</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline col-sm-4">
+                <input type="radio" id="femme" name="sexe" value="0" class="custom-control-input">
+                <label class="custom-control-label" for="femme">Femme</label>
+            </div>
+        </div>
+
+    </div>
+
 
 
     {{ include('medecins/_form.html.twig') }}
